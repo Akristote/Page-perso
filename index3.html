@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Yodé - Page Personnelle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            overflow: hidden; /* Prevent scrolling while loading */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #33CCCC;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: #00796b 3px solid;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            margin: 20px 0 0 0;
+        }
+        header ul li {
+            display: inline;
+            padding: 0 20px;
+        }
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        .profile-pic {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .profile-pic img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .side-content, .main-section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .side-content {
+            width: 25%;
+            text-align: center;
+        }
+        .main-section {
+            width: 70%;
+            margin-left: 20px;
+            text-align: justify;
+        }
+        .main-section h2 {
+            text-align: center;
+        }
+        .experience-item {
+            margin-bottom: 20px;
+        }
+        .download-cv {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .download-cv a {
+            background: #33CCCC;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #33CCCC;
+            text-align: center;
+        }
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #33CCCC;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 1000;
+        }
+        .loading-screen h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .loading-bar {
+            width: 80%;
+            background: #fff;
+            height: 30px;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .loading-bar div {
+            height: 100%;
+            width: 0;
+            background: #ffeb3b;
+            animation: loading 2s ease-in-out forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .loading-bar div::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,235,59,0) 0%, rgba(255,235,59,1) 50%, rgba(255,235,59,0) 100%);
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: shimmer 1s linear infinite;
+        }
+        @keyframes loading {
+            to {
+                width: 100%;
+            }
+        }
+        @keyframes shimmer {
+            from {
+                left: -100%;
+            }
+            to {
+                left: 100%;
+            }
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 15px;
+        }
+        ul li strong {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        ul li ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-screen" id="loadingScreen">
+        <h1>Chargement...</h1>
+        <div class="loading-bar">
+            <div></div>
+        </div>
+    </div>
+    
+    <header>
+        <div class="container">
+            <h1>Christian Yodé</h1>
+            <ul>
+                <li><a href="#bio">Biographie</a></li>
+                <li><a href="#experiences">Expériences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="profile-pic">
+        <img src="Cv photo.jpeg" alt="Photo de Christian Yodé">
+    </div>
+
+    <div class="container main-content">
+        <div class="side-content">
+            <section id="bio" class="bio">
+                <h2>Biographie</h2>
+                <p>Je suis Christian Yodé, Legal Manager avec une expérience diversifiée dans les domaines du droit de la distribution, de la concurrence, de la consommation et de la publicité. Titulaire du Diplôme d'Avocat, j'ai acquis une expertise approfondie dans le retail et la foodtech grâce à mes postes précédents notamment chez Getir et E.Leclerc.</p>
+            </section>
+            <section id="contact" class="contact">
+                <h2>Contact</h2>
+                <p>Email : <a href="mailto:christian.d.yode@hotmail.com">christian.d.yode@hotmail.com</a></p>
+                <p>Téléphone : 06.95.79.13.60</p>
+                <p>Adresse : 4 rue du Billoir, 91170 Viry-Châtillon</p>
+                <p>LinkedIn : <a href="https://www.linkedin.com/in/christianyode/" target="_blank">Christian Yodé</a></p>
+            </section>
+            <section id="download-cv" class="download-cv">
+                <h2>Télécharger mon CV</h2>
+                <a href="path/to/your/cv.pdf" download>Télécharger le CV</a>
+            </section>
+        </div>
+        <div class="main-section">
+            <section id="experiences" class="experiences">
+                <h2>Expériences Professionnelles</h2>
+                <div class="experience-item">
+                    <strong>HELLOFRESH Paris</strong> - Legal Manager (Septembre 2023 - Mars 2024)
+                    <ul>
+                        <li>Membre du CODIR</li>
+                        <li>Conseil en droit de la distribution et de la consommation</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <strong>GETIR Paris</strong> - Senior Legal Counsel & Legal Manager (Mars 2022 - Septembre 2023)
+                    <ul>
+                        <li>Supervision des affaires juridiques</li>
+                        <li>Formation et conseil aux opérationnels</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <strong>INTERMARCHÉ Bondoufle</strong> - Juriste Confirmé (Novembre 2021 - Mars 2022)
+                    <ul>
+                        <li>Négociations contractuelles</li>
+                        <li>Gestion des litiges précontentieux</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <strong>GALEC Ivry-sur-Seine</strong> - Stagiaire, Juriste Junior, Juriste Confirmé (Juillet 2018 - Novembre 2021)
+                    <ul>
+                        <li>Rédaction de contrats</li>
+                        <li>Suivi des réclamations et conformité RGPD</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <strong>EDF Direction juridique Saint-Denis</strong> - Stage Élève-Avocat (Janvier 2018 - Juin 2018)
+                    <ul>
+                        <li>Rédaction de mémos juridiques</li>
+                        <li>Conseil en droit de l'énergie</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <strong>Schuhler-Bourrellis Avocat à la Cour Paris</strong> - Stage Élève-Avocat (Octobre 2017 - Décembre 2017)
+                    <ul>
+                        <li>Assistance aux avocats en contentieux</li>
+                        <li>Recherche juridique et rédaction de conclusions</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>Christian Yodé &copy; 2024</p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('loadingScreen').style.display = 'none';
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            }, 2000); // Adjust the time (in milliseconds) if you want the loading to be faster or slower
+        };
+    </script>
+</body>
+</html>
